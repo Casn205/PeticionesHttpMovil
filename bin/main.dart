@@ -1,4 +1,4 @@
-import 'package:actividadhttpdart/User.dart'; 
+import '../lib/User.dart'; 
 import 'Peticiones.dart';
 
 void main() async {
@@ -9,16 +9,16 @@ void main() async {
     
     List<User> usuariosFiltrados = FiltrarUsername(users); // obtiene una lista de usuarios
     print('Usuarios con username de mas de 6 caracteres: ${usuariosFiltrados.length}');
-    usuariosFiltrados.forEach((user) {
+    for (var user in usuariosFiltrados) {
       user.MostrarDatos();
-    });
+    }
 
     
     List<User> emailFiltrado = FiltrarDominio(users); // obtiene una lista de usuarios
     print("\n Cantidad de usuarios en dominio biz: ${emailFiltrado.length}");
-    emailFiltrado.forEach((user) {
+    for (var user in emailFiltrado) {
       user.MostrarDatos();
-    });
+    }
 
   } catch (e) {
     print('Error: $e'); // muestra el mensaje en caso de error del throw en Peticiones.dart

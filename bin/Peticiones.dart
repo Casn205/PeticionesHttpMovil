@@ -1,6 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:actividadhttpdart/User.dart'; 
+import '../lib/User.dart'; 
 
 Future<List<User>> fetchUsers() async {
 
